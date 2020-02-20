@@ -4,6 +4,7 @@ user_age = int(input('Введите ваш возраст: '))
 #print(f'Пользователь ввел: {user_age}.')
 
 def user_need_do(user_age):
+    """Дает жизненный совет, на вход принимает целое число."""
     user_age = abs(user_age)
     if user_age < 3:
         return 'Вы еще слишком маленький, вам надо быть дома с родителями.'
