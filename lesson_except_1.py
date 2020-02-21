@@ -18,17 +18,20 @@ def ask_user():
     """Отвечает на вопросы пользоателя, ответы берет из словаря.
     Выходит из цикла, если пользователь напишет "Хватит вопросов"
     """
-    while True:
-        user_say = input('Напиши что хочешь спросить: ').strip().lower().capitalize()
-        if user_say in questioin_stop:
-            print(f'{questioin_stop.get(user_say, 0)}')
-            break
-        if user_say in questioin_dictionary:
-            print(f'{questioin_dictionary.get(user_say, 0)}')
-        else:
-            print('Я не знаю ответа на данный вопрос.')
-            print('---------------')
-            continue
+    try:
+        while True:
+            user_say = input('Напиши что хочешь спросить: ').strip().lower().capitalize()
+            if user_say in questioin_stop:
+                print(f'{questioin_stop.get(user_say, 0)}')
+                break
+            if user_say in questioin_dictionary:
+                print(f'{questioin_dictionary.get(user_say, 0)}')
+            else:
+                print('Я не знаю ответа на данный вопрос.')
+                print('---------------')
+                continue
+    except KeyboardInterrupt:
+        print('\n\nВы завершили программу. \nПока!')
          
 
 result_ask = ask_user()
