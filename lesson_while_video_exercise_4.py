@@ -15,6 +15,9 @@ questioin_stop = {
 
 
 def ask_user():
+    """Отвечает на вопросы пользоателя, ответы берет из словаря.
+    Выходит из цикла, если пользователь напишет "Хватит вопросов"
+    """
     while True:
         user_say = input('Напиши что хочешь спросить: ').strip().lower().capitalize()
         if user_say in questioin_stop:
