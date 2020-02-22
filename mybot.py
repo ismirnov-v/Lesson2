@@ -23,6 +23,7 @@ def check_constellation(bot, update):
         """ Функция возвращает созвездие где находится планета в текущий момент времени.
         На вход ожидает имя планеты"""
         try:
+            # C помощью встроенной функции getattr получаем значение атрибута  объекта user_planet.
             planet = getattr(ephem, user_planet)()
             planet.compute(datetime.now())
             return f'В данный момент {user_planet} находится в созвездии:\n {ephem.constellation(planet)}'      
