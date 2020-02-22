@@ -3,3 +3,10 @@
 .project
 .settings/
 .vscode/
+
+#Файл с ключом
+sec.py
+__pycache__/
+
+#Логи
+*.log
