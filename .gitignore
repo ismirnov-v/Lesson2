@@ -7,6 +7,15 @@
 #Файл с ключом
 sec.py
 __pycache__/
+**/__pycache__/
 
 #Логи
 *.log
+
+#Виртуальное окружение питона
+venv
+.venv
+pyenv
+env
+.env
+
